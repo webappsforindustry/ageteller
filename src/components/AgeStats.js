@@ -19,9 +19,9 @@ class AgeStats extends Component {
   render() {
     return (
       <div>
-        <h3>{this.props.date}</h3>
-        <h4>Congrats on {this.timeSince(this.props.date)}!</h4>
-        <img src={partyPopper} alt="party popper" className='party-popper'/>
+        <h3 className='mt-4'>{this.props.date}</h3>
+        <h4 className='mt-4'>Congrats on {this.timeSince(this.props.date)}!</h4>
+        <img src={partyPopper} alt="party popper" className='party-popper mx-auto mt-4 rounded-lg'/>
       </div>
     );
   }

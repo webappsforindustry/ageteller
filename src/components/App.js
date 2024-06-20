@@ -21,14 +21,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App h-screen bg-slate-300">
         <Form inline>
-          <h2>Input Your Birthday!</h2>
+          <h2 className='text-2xl font-bold'>Input Your Birthday!</h2>
           <FormControl
             type="date"
             onChange={event => this.setState({ newDate: event.target.value })}
+            className='w-1/3 mx-auto bg-slate-200 mt-4'
           ></FormControl>
-          <Button onClick={() => this.changeBirthday()}>Submit</Button>
+          <Button className='mt-4' onClick={() => this.changeBirthday()}>Submit</Button>
           {this.state.showStats ? <div className='fade age-stats'><AgeStats date={this.state.birthday}/></div>  : <div></div>}
         </Form>
       </div>
